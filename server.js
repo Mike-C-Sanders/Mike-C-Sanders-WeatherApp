@@ -1,13 +1,13 @@
 // Setup empty JS object to act as endpoint for all routes
-//86744e63c92ac49ce6a60bac199455ef - API Key name weatherapp
+//7ddac6b965b24370c39787b9c1d7fc4d - API Key name weatherapp
 //https://home.openweathermap.org/api_keys
-//postData();
 
 // Require Express to run server and routes
 const express = require('express');
 
 // Start up an instance of app
 const app = express();
+
 /* Middleware*/
 const bodyParser = require('body-parser');
 //Here we are configuring express to use body-parser as middle-ware.
@@ -29,6 +29,32 @@ function listening(){
     console.log(`running on localhost: ${port}`);
 }
 
-app.get('/', (req, res)=> {
-    res.send('Hello Mike! This server is running on your machine. Good.');
-})
+//weather data array
+let weatherData = [];
+
+//Get the weather data based on user input
+app.get('/all', getData);
+//post weather data
+app.post('/addWeather', addWeather);
+
+function getData(req, res){
+    console.log('Get Data')
+    res.send(weatherData);
+}
+
+//Object creation for data
+function addWeather(req, res){
+    console.log('Add Weather Function')
+    let projectData = {
+        temperature: req.body.temperature,
+        location: req.body.location,
+        date: req.body.date,
+        content: req.body.content
+    
+    }
+    weatherData.push(projectData);
+    console.log('after push call')
+    res.send(weatherData);
+    console.log(weatherData);
+
+}
