@@ -1,23 +1,22 @@
 body{
-    background: #fffff8;
+    background: linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff);
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 #app{
+    text-align: center;
     display: grid;
     grid-auto-rows: minmax(150px, auto);
     /* grid-template-columns:  */
-    height:100vh;
-    background: #f23557;
-    color: #f0d43a;
     justify-content: center;
+    
     grid-gap: 1em;
     font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif; 
 }
 
 .holder{
-
+    align-items: center;
 }
 
 .entry{
@@ -76,6 +75,9 @@ button{
 }
 h1{
     font-size: 36px;
+    text-align: center;
+    border: #3b4a6b;
+    background-color: #22b2da;
 }
 
 textarea{
