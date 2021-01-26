@@ -2,11 +2,27 @@
 
 ## Overview
 
-This project requires to create an asynchronous web app that uses Web API and user data to dynamically update the UI.
+Track your weather daily weather data.
+
+Asynchronous web application using openweathermap.com's weather API data.
 
 ## Instructions
-This will require modifying the server.js file and the website/app.js file. You can see index.html for element references, and once you are finished with the project steps, you can use style.css to style your application to customized perfection.
+In order to use this code, you'll need to install node js, express and body-parser
 
-## Extras
+npm install express
+npm install body-parser
 
-If you are interested in testing your code as you go, you can use tests.js as a template for writing and running some basic tests for your code.
+
+## Usage
+execute the server.js file with 
+
+node server.js
+
+then open the index.html
+
+## Future Development
+
+I'll be adding in additional content to this app. 
+1. Displaying a weather image
+2. storing historical weather data
+3. accessing previous entries to the journal
